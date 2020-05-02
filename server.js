@@ -52,7 +52,7 @@ app.use(koaBody({
 
 let imgContainer = [];
 
-app.use(async ctx => {
+app.use(async (ctx, next) => {
 
   const origin = ctx.request.get('Origin');
     if (!origin) {
